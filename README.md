@@ -3,7 +3,7 @@
 React helper class to generate elements
 
 ## Installing
-`npm install --save react-e
+`npm install --save react-e`
 
 ## Example Usage
 
