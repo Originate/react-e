@@ -1,0 +1,31 @@
+{
+  "name": "react-e",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "lsc --compile --bare --output lib src"
+  },
+  "files": [
+    "lib",
+    "README.md",
+    "LICENSE"
+  ],
+  "main": "lib/react-e.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Originate/react-e.git"
+  },
+  "author": "Originate",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Originate/react-e/issues"
+  },
+  "homepage": "https://github.com/Originate/react-e#readme",
+  "devDependencies": {
+    "livescript": "^1.5.0"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "react": "^15.3.2"
+  }
+}

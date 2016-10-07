@@ -1,0 +1,14 @@
+test:
+  pre:
+    - npm run build
+
+  override:
+    - true
+
+
+deployment:
+  publish:
+    branch: master
+    commands:
+      - npm set //registry.npmjs.org/:_authToken $AUTH_TOKEN
+      - npm publish
