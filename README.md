@@ -1,6 +1,6 @@
 # react-e
 
-React helper class to generate elements
+React helper to generate elements
 
 ## Installing
 `npm install --save react-e`
