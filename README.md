@@ -1,4 +1,4 @@
-# react-e
+# react-e [![CircleCI](https://circleci.com/gh/Originate/react-e.svg?style=svg)](https://circleci.com/gh/Originate/react-e)
 
 React helper to generate elements
 
