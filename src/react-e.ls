@@ -10,6 +10,8 @@ module.exports = (elementStr, opts = {}, ...children) ->
   if opts not instanceof Object or opts instanceof Array or opts.$$typeof?
     children = [opts, ...children]
     opts = {}
+   
+  allClasses = classnames classes, opts.className
+  opts.className = allClasses if allClasses
 
-  opts.className = classnames classes, opts.className
   react.DOM[elementTag or 'div'] opts, ...children
