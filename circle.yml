@@ -1,9 +1,6 @@
 test:
-  pre:
+  post:
     - npm run build
-
-  override:
-    - 'true'
 
 
 deployment:
