@@ -7,9 +7,8 @@
     "test": "mocha test"
   },
   "files": [
-    "lib",
-    "README.md",
-    "LICENSE"
+    "bind.js",
+    "lib"
   ],
   "main": "lib/index.js",
   "repository": {
