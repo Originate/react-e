@@ -1,3 +1,7 @@
+## 2.0.1 (2016-10-28)
+
+* include `bind.js` in published module
+
 ## 2.0.0 (2016-10-25)
 
 * Move react from a dependency to a peer dependency
