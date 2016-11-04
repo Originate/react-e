@@ -51,7 +51,12 @@ examples = [
   output: react.DOM.div {'data-value': 1}, childrenArray
 ]
 
-describe 'react-e', ->
+describe 'react-e' ->
   examples.forEach ({description, input, output}) ->
-    it description, ->
+    specify description, ->
       expect(e(...input)).to.eql output
+
+  specify 'does not mutate the passed in opts' ->
+    props = className: {foo: false}
+    e('span', props)
+    expect(props).to.eql className: {foo: false}

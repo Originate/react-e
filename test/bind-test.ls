@@ -17,5 +17,5 @@ examples = [
 
 describe 'react-e bind', ->
   examples.forEach ({description, input, output, styles}) ->
-    it description, ->
+    specify description, ->
       expect(eBind(styles)(...input)).to.eql output

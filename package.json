@@ -28,7 +28,8 @@
     "react": "^15.3.2"
   },
   "dependencies": {
-    "classnames": "^2.2.5"
+    "classnames": "^2.2.5",
+    "lodash.assign": "^4.2.0"
   },
   "peerDependencies": {
     "react": "^15.3.2"

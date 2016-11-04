@@ -1,4 +1,5 @@
 require! {
+  'lodash.assign': assign
   react
 }
 
@@ -10,7 +11,9 @@ module.exports = (classnames) ->
       children = [opts, ...children]
       opts = {}
 
-    opts.className = classnames classes, opts.className
-    delete opts.className unless opts.className
+    clonedOpts = assign {}, opts
 
-    react.DOM[elementTag or 'div'] opts, ...children
+    clonedOpts.className = classnames classes, clonedOpts.className
+    delete clonedOpts.className unless clonedOpts.className
+
+    react.DOM[elementTag or 'div'] clonedOpts, ...children
