@@ -10,7 +10,7 @@ module.exports = (classnames) ->
       children = [opts, ...children]
       opts = {}
 
-    allClasses = classnames classes, opts.className
-    opts.className = allClasses if allClasses
+    opts.className = classnames classes, opts.className
+    delete opts.className unless opts.className
 
     react.DOM[elementTag or 'div'] opts, ...children

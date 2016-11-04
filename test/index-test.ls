@@ -30,6 +30,10 @@ examples = [
   description: 'classnames support'
   output: react.DOM.span {className: 'foo bar'}
 ,
+  input: ['span', className: {bar: false}]
+  description: 'overriding empty class name'
+  output: react.DOM.span {}
+,
   input: ['div', child]
   description: 'without props, with child'
   output: react.DOM.div {}, child
