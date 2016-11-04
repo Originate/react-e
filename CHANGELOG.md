@@ -1,3 +1,8 @@
+## 2.0.2 (2016-11-03)
+
+* fix classnames bug that resulted in `class="[object Object]"`
+* props are no longer mutated
+
 ## 2.0.1 (2016-10-28)
 
 * include `bind.js` in published module
