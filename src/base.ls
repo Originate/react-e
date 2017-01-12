@@ -3,17 +3,19 @@ require! {
   react
 }
 
-module.exports = (classnames) ->
-  (elementStr, opts = {}, ...children) ->
-    [elementTag, ...classes] = elementStr.split '.'
 
-    if opts not instanceof Object or opts instanceof Array or opts.$$typeof?
-      children = [opts, ...children]
-      opts = {}
+module.exports = (classnames) -> (element, opts = {}, ...children) ->
+  if typeof element is \string
+    [element, ...classes] = element.split '.'
+    element = 'div' if element is ''
 
-    clonedOpts = assign {}, opts
+  if opts not instanceof Object or opts instanceof Array or opts.$$typeof?
+    children = [opts, ...children]
+    opts = {}
 
-    clonedOpts.className = classnames classes, clonedOpts.className
-    delete clonedOpts.className unless clonedOpts.className
+  cloned-opts = assign {}, opts
 
-    react.DOM[elementTag or 'div'] clonedOpts, ...children
+  cloned-opts.class-name = classnames classes, cloned-opts.class-name
+  delete cloned-opts.class-name unless cloned-opts.class-name
+
+  react.create-element element, cloned-opts, ...children

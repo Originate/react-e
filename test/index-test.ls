@@ -9,6 +9,8 @@ childrenArray = [
   react.DOM.span {key: 2}, 'child2'
 ]
 
+TestComponent = -> react.DOM.div {}, 'test'
+
 examples = [
   input: ['span']
   description: 'tag only'
@@ -49,6 +51,22 @@ examples = [
   input: ['div', {'data-value': 1}, childrenArray]
   description: 'with props, with children array'
   output: react.DOM.div {'data-value': 1}, childrenArray
+,
+  input: [TestComponent]
+  description: 'component'
+  output: react.create-element TestComponent
+,
+  input: [TestComponent, {'data-value': 1}]
+  description: 'component, with props'
+  output: react.create-element TestComponent, {'data-value': 1}
+,
+  input: [TestComponent, {'data-value': 1}, child]
+  description: 'component, with props, with child'
+  output: react.create-element TestComponent, {'data-value': 1}, child
+,
+  input: [TestComponent, ...childrenArray]
+  description: 'component, with children'
+  output: react.create-element TestComponent, {}, childrenArray
 ]
 
 describe 'react-e' ->

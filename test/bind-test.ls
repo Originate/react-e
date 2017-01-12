@@ -3,6 +3,9 @@ require! {
   react
 }
 
+
+TestComponent = -> react.DOM.div {}, 'test'
+
 examples = [
   description: 'with local classname'
   input: ['.root']
@@ -12,6 +15,16 @@ examples = [
   description: 'with global classname'
   input: ['.foo']
   output: react.DOM.div {className: 'foo'}
+  styles: {}
+,
+  description: 'component with local classname'
+  input: [TestComponent, className: 'root']
+  output: react.create-element TestComponent, {className: 'foo'}
+  styles: {root: 'foo'}
+,
+  description: 'component with global classname'
+  input: [TestComponent, className: 'foo']
+  output: react.create-element TestComponent, {className: 'foo'}
   styles: {}
 ]
 
