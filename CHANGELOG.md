@@ -1,3 +1,15 @@
+## 2.1.2 (2017-06-09)
+
+* throw error if element string contains a space
+
+## 2.1.1 (2017-01-25)
+
+* remove lodash dependency
+
+## 2.1.0 (2017-01-11)
+
+* add support for passing in a react component instead of a string as the first argument
+
 ## 2.0.2 (2016-11-03)
 
 * fix classnames bug that resulted in `class="[object Object]"`
