@@ -9,6 +9,8 @@ is-props-object = (thing) ->
 
 module.exports = (classnames) -> (element, opts, ...children) ->
   if typeof element is \string
+    if element.indexOf(' ') isnt -1
+      throw Error "unsupported syntax: '#{element}' contains a space"
     [element, ...classes] = element.split '.'
     element = 'div' if element is ''
 

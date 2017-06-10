@@ -32,3 +32,8 @@ describe 'react-e bind', ->
   examples.forEach ({description, input, output, styles}) ->
     specify description, ->
       expect(eBind(styles)(...input)).to.eql output
+
+  specify 'throws an error if the the selector contains a space' ->
+    expect(->
+      eBind({})('.foo bar')
+    ).to.throw "unsupported syntax: '.foo bar' contains a space"

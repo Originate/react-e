@@ -78,3 +78,8 @@ describe 'react-e' ->
     props = className: {foo: false}
     e('span', props)
     expect(props).to.eql className: {foo: false}
+
+  specify 'throws an error if the the selector contains a space' ->
+    expect(->
+      e('.foo bar')
+    ).to.throw "unsupported syntax: '.foo bar' contains a space"
