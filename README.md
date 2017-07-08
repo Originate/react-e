@@ -24,7 +24,14 @@ Is equivalent to:
 
 
 ## Installation
-`npm install --save react-e`
+
+```
+yarn add react-e
+```
+or
+```
+npm install --save react-e
+```
 
 
 ## Features

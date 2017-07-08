@@ -1,6 +1,18 @@
+machine:
+  environment:
+    PATH: "${PATH}:${HOME}/${CIRCLE_PROJECT_REPONAME}/node_modules/.bin"
+
+dependencies:
+  override:
+    - yarn
+  cache_directories:
+    - ~/.cache/yarn
+
 test:
-  post:
-    - npm run build
+  override:
+    - yarn test
+    - yarn build
+    - yarn check
 
 
 deployment:
